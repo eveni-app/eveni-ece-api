@@ -29,7 +29,7 @@ module Fhir
         {
           use: "official",
           family: patient.last_name,
-          given: [patient.first_name]
+          given: [ patient.first_name ]
         }
       ]
     end
@@ -48,7 +48,7 @@ module Fhir
 
     field :meta do |patient|
       {
-        profile: ["http://hl7.org/fhir/StructureDefinition/Patient"],
+        profile: [ "http://hl7.org/fhir/StructureDefinition/Patient" ],
         lastUpdated: patient.updated_at&.iso8601
       }
     end

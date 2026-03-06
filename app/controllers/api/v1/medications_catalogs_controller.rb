@@ -1,7 +1,7 @@
 module Api
   module V1
     class MedicationsCatalogsController < BaseController
-      skip_before_action :authenticate_user!, only: [:index, :show]
+      skip_before_action :authenticate_user!, only: [ :index, :show ]
 
       def index
         meds = MedicationsCatalog.all

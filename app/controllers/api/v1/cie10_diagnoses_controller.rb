@@ -1,7 +1,7 @@
 module Api
   module V1
     class Cie10DiagnosesController < BaseController
-      skip_before_action :authenticate_user!, only: [:index, :show]
+      skip_before_action :authenticate_user!, only: [ :index, :show ]
 
       def index
         diagnoses = Cie10Diagnosis.all
